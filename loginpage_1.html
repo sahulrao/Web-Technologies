@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            Validate
+        </title>
+    </head>
+    <body>
+        <center>
+            <div class="container">
+            <b>Display error without alert box</b>
+            
+            <div>
+                <label>Email:</label>
+                <input type= "text"  class="form-control"  placeholder="Email" tabindex="1"><br>
+            </div>
+
+            <div>
+                <br><label>Password:</label>
+                <input type= "text" class="form-control" placeholder="Password" tabindex="2" ><br>
+            </div>
+            
+            <div>
+                <br><label>Contact No:</label>
+                <input type="text" id="number" class="form-control" placeholder="Enter 10 Digits" tabindex="3" >
+                <span id="error"></span>
+            <br>
+            </div>
+
+            <br><button type="submit" 
+            oneclick="errorMessage()"  >
+            Validate
+            </button>
+
+            </div>        
+
+
+
+        
+        </center>
+    </body>
+    <script>
+        function errorMessage(){
+            var error = document.getElementById("error")
+            if(isNaN(document.getElementById("number").value)){
+                error.textContent = "Please enter a valid number"
+                error.style.color = "red"
+            }
+            else{
+                error.textContent=""
+            }
+        }
+        </script>
+
+</html>
